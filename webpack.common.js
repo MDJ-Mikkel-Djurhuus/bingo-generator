@@ -6,7 +6,7 @@ module.exports = {
     entry:  "./src/index.js",
     output: {
         filename: "bingo-generator.js",
-        output: path.resolve(__dirname, 'lib'),
+        path: path.resolve(__dirname, 'lib'),
         libraryTarget: "umd",
         library: "bingo-generator"
     },

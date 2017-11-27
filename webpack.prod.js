@@ -1,4 +1,4 @@
-var webpack = require("webpack");
+var webpack = require("webpack");var path = require("path");
 var common = require("./webpack.common");
 var merge = require("webpack-merge");
 var UglifyJSPlugin = require("uglifyjs-webpack-plugin");
