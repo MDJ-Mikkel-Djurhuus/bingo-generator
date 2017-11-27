@@ -1,5 +1,5 @@
 # bingo-generator
-![alt text](https://github.com/MDJ-Mikkel-Djurhuus/bingo-generator/raw/master/formatHTML.png "Bingo Bango!")
+simple bingo generator
 
 ## Installation
 npm install bingo-generator --save
@@ -84,4 +84,8 @@ console.log(generator.createBoard());
     { col: 8, number: 82 } ] ]
 ```
  (with the winner defined, a board will always contain a cell with the winning number)
+ 
+### Example of formatted board
+generator.formatHTML()
+![alt text](https://github.com/MDJ-Mikkel-Djurhuus/bingo-generator/raw/master/formatHTML.PNG "Bingo Bango!")
 
