@@ -1,0 +1,41 @@
+{
+  "name": "bingo-generator",
+  "version": "1.0.0",
+  "description": "simple bingo generator",
+  "main": "bingo-generator.js",
+  "scripts": {
+    "test": "mocha-webpack",
+    "test-watch": "mocha-webpack --w",
+    "start": "webpack-dev-server --open --config webpack.dev.js",
+    "build": "npm run test && webpack --config webpack.prod.js",
+    "prepublish": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MDJ-Mikkel-Djurhuus/bingo-generator.git"
+  },
+  "keywords": [
+    "bingo",
+    "generator",
+    "djur"
+  ],
+  "author": "mikkel.djurhuus@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MDJ-Mikkel-Djurhuus/bingo-generator/issues"
+  },
+  "homepage": "https://github.com/MDJ-Mikkel-Djurhuus/bingo-generator#readme",
+  "devDependencies": {
+    "clean-webpack-plugin": "^0.1.17",
+    "mocha": "^4.0.1",
+    "mocha-webpack": "^1.0.1",
+    "uglifyjs-webpack-plugin": "^1.1.1",
+    "webpack": "^3.8.1",
+    "webpack-dev-server": "^2.9.4",
+    "webpack-merge": "^4.1.1",
+    "webpack-node-externals": "^1.6.0"
+  },
+  "dependencies": {
+    "lodash": "^4.17.4"
+  }
+}
