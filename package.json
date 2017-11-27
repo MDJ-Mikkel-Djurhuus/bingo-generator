@@ -1,6 +1,6 @@
 {
   "name": "bingo-generator",
-  "version": "1.1.3",
+  "version": "1.1.4",
   "description": "simple bingo generator",
   "main": "bingo-generator.js",
   "scripts": {

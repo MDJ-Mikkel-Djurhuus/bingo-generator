@@ -1,3 +1,5 @@
+import { resolve } from "url";
+
 var path = require("path");
 var webpack = require("webpack");
 var CleanWebPackPlugin = require("clean-webpack-plugin");
@@ -5,9 +7,10 @@ var CleanWebPackPlugin = require("clean-webpack-plugin");
 module.exports = {
     entry:  "./src/index.js",
     output: {
-        filename: "./lib/bingo-generator.js",
+        filename: "bingo-generator.js",
+        output: path.resolve(__dirname, 'lib'),
         libraryTarget: "umd",
-        libraray: "bingo-generator"
+        library: "bingo-generator"
     },
     plugins: [
         new CleanWebPackPlugin(["lib"])
