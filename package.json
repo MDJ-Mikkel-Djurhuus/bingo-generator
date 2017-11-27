@@ -1,6 +1,6 @@
 {
   "name": "bingo-generator",
-  "version": "1.1.1",
+  "version": "1.1.0",
   "description": "simple bingo generator",
   "main": "bingo-generator.js",
   "scripts": {
@@ -8,7 +8,9 @@
     "test-watch": "mocha-webpack --w",
     "start": "webpack-dev-server --open --config webpack.dev.js",
     "build": "npm run test && webpack --config webpack.prod.js",
-    "prepublish": "npm run build"
+    "preversion": "npm test",
+    "version": "npm run build && git add -A dist",
+    "postversion": "git push && git push --tags && rm -rf build/temp"
   },
   "repository": {
     "type": "git",
