@@ -2,7 +2,7 @@
   "name": "bingo-generator",
   "version": "1.1.7",
   "description": "simple bingo generator",
-  "main": "bingo-generator.js",
+  "main": "./lib/bingo-generator.js",
   "scripts": {
     "start": "webpack-dev-server --open --config webpack.dev.js",
     "test": "mocha-webpack",

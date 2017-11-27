@@ -1,6 +1,10 @@
 import { shuffle, htmlToElement } from "./utils"
 import { cloneDeep } from "lodash"
 
+export default function (config) {
+    return new BingoGenerator(config);
+}
+
 class BingoGenerator {
     constructor({
         number_of_rows = 3,
@@ -74,12 +78,12 @@ class BingoGenerator {
         cols = cols.map(col => ({ col: col, number: pool[col].pop() }))
         if (winner) {
             if (rows.length < 1) {
-                if(winner.length > 0){
+                if (winner.length > 0) {
                     winner.forEach(number => {
                         this.setWinner(number, cols, pool);
                     });
-                }  
-                else{
+                }
+                else {
                     this.setWinner(winner, cols, pool);
                 }
             }
@@ -87,17 +91,17 @@ class BingoGenerator {
         return cols;
     }
 
-    setWinner(winner, cols, pool){
+    setWinner(winner, cols, pool) {
         let index = this.GetIndex(winner)
         let a = cols.filter(x => x.col === index);
         if (a[0]) {
             a[0].number = winner;
         }
         else {
-            console.log(cols.splice(0,1));
+            console.log(cols.splice(0, 1));
             cols.push({ col: index, number: winner })
         }
-        pool[index] = pool[index].filter(x=>x != winner)   
+        pool[index] = pool[index].filter(x => x != winner)
     }
 
     GetIndex(number) {
@@ -164,5 +168,3 @@ class BingoGenerator {
     }
 
 }
-
-export default BingoGenerator;
