@@ -5,3 +5,4 @@ webpack.test.js
 webpack.dev.js
 webpack.prod.js
 mocha.webpack.opts
+formatHTML.PNG
