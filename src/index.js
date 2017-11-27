@@ -1,7 +1,7 @@
 import { shuffle, htmlToElement } from "./utils"
 import { cloneDeep } from "lodash"
 
-module.exports = function (config) {
+export default function (config) {
     config = config || {};
     return new BingoGenerator(config);
 }
