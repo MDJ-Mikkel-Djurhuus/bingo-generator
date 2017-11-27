@@ -1,5 +1,3 @@
-import { resolve } from "url";
-
 var path = require("path");
 var webpack = require("webpack");
 var CleanWebPackPlugin = require("clean-webpack-plugin");
